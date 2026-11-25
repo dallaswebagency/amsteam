@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Edmonton’s Best Carpet Cleaner | AmSteam Edmonton</title>
+<meta name="description" content="Trusted Edmonton Carpet Cleaning Service for over 25 years! Family owned, No Surprises Guarantee... Experience the AmSteam Difference, Today!">
+<link rel="icon" href="images/amsteam-advantage-badge.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#E82838; --red-deep:#B81B2B; --blue:#0080C0; --blue-deep:#0A4E78; --navy:#062F4B;
+  --ink:#13212C; --ink-soft:#4A5C6A; --paper:#FFFFFF; --mist:#EDF5FA; --line:rgba(10,78,120,.16);
+  --plate:#FFFFFF;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --ink:#E6EEF4; --ink-soft:#A9BBC8; --paper:#0C1B26; --mist:#112634; --line:rgba(160,200,230,.18); color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --ink:#E6EEF4; --ink-soft:#A9BBC8; --paper:#0C1B26; --mist:#112634; --line:rgba(160,200,230,.18); color-scheme:dark; }
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:calc(env(safe-area-inset-top,0px) + 90px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--red);color:#fff;padding:8px 14px;z-index:99}
+.skip:focus{left:12px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-variation-settings:"wdth" 108;font-size:16px;text-decoration:none;padding:15px 26px;border-radius:999px;border:2px solid transparent;transition:background .2s,color .2s,border-color .2s,transform .2s;cursor:pointer;line-height:1}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-deep)}
+.btn-line{border-color:currentColor;color:var(--blue-deep)}
+.btn-line:hover{background:var(--blue-deep);color:#fff;border-color:var(--blue-deep)}
+.btn svg{width:18px;height:18px}
+
+/* top bar */
+.topbar{background:var(--navy);color:#D6E7F3;font-size:14px}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px}
+.topbar ul{list-style:none;margin:0;padding:0;display:flex;gap:26px;flex-wrap:wrap}
+.topbar a{text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.topbar a:hover{color:#fff}
+.topbar svg{width:15px;height:15px;color:#6CC3F0}
+.topbar .book{background:var(--red);color:#fff;font-weight:700;padding:7px 18px;border-radius:999px}
+@media (max-width:860px){.topbar .hide-sm{display:none}}
+
+/* header */
+.header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:84px}
+.logo{display:block;padding:6px 10px;border-radius:12px;background:var(--plate)}
+.logo img{width:190px;height:auto}
+.nav>ul{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:4px}
+.nav>ul>li{position:relative}
+.nav>ul>li>a{display:flex;align-items:center;gap:6px;padding:12px 14px;text-decoration:none;font-weight:600;font-size:15.5px;border-radius:10px}
+.nav>ul>li>a:hover{color:var(--red)}
+.nav .caret{width:10px;height:10px;transition:transform .2s}
+.drop{position:absolute;top:calc(100% + 6px);left:0;min-width:270px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:10px;list-style:none;margin:0;box-shadow:0 24px 50px -20px rgba(6,47,75,.35);opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s}
+.nav li:hover>.drop,.nav li:focus-within>.drop{opacity:1;visibility:visible;transform:none}
+.drop a{display:block;padding:10px 14px;border-radius:10px;text-decoration:none;font-size:15px}
+.drop a:hover{background:var(--mist);color:var(--blue-deep)}
+.menu-btn{display:none;background:none;border:1.5px solid var(--line);border-radius:12px;width:48px;height:48px;align-items:center;justify-content:center;cursor:pointer;color:var(--ink)}
+@media (max-width:1100px){
+  .menu-btn{display:inline-flex}
+  .header .btn-red{display:none}
+  .nav{position:fixed;inset:0;top:0;background:var(--paper);padding:calc(env(safe-area-inset-top,0px) + 96px) 24px 40px;transform:translateX(100%);transition:transform .3s;overflow-y:auto;z-index:-1}
+  .nav.open{transform:none}
+  .nav>ul{flex-direction:column;align-items:stretch}
+  .nav>ul>li>a{font-size:20px;font-family:var(--display);font-weight:700;padding:14px 6px;border-bottom:1px solid var(--line);border-radius:0}
+  .drop{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;padding:4px 0 10px 12px}
+  .nav .mobile-book{display:flex;margin-top:22px;justify-content:center}
+}
+.nav .mobile-book{display:none}
+
+/* hero */
+.hero{position:relative;padding:56px 0 90px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.08fr;gap:48px;align-items:center}
+.kicker{font-family:var(--display);font-style:italic;font-weight:600;font-size:19px;color:var(--blue);margin:0 0 18px;display:flex;align-items:center;gap:12px}
+.kicker svg{width:46px;height:14px;flex:none}
+.hero h1{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 118;font-size:clamp(46px,6.4vw,96px);line-height:.92;letter-spacing:-.02em;margin:0 0 26px}
+.hero h1 .l2{display:block;color:var(--blue-deep)}
+:root[data-theme="dark"] .hero h1 .l2{color:#6CC3F0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero h1 .l2{color:#6CC3F0}}
+.hero h1 .l3{display:block;color:var(--red)}
+.hero p.lead{font-size:19px;max-width:30em;color:var(--ink-soft);margin:0 0 30px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:38px}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;border-top:1px solid var(--line);padding-top:22px}
+.facts div{padding-right:26px;margin-right:26px;border-right:1px solid var(--line)}
+.facts div:last-child{border:0;margin:0;padding:0}
+.facts b{display:block;font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 112;font-size:30px;line-height:1.1;color:var(--ink)}
+.facts span{font-size:14.5px;color:var(--ink-soft)}
+
+.stage{position:relative;aspect-ratio:1.02/1}
+.stage .frame{position:absolute;inset:0;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M6 4 C30 0 58 9 100 2 L100 92 C72 99 44 91 8 98 C2 70 10 36 6 4Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M6 4 C30 0 58 9 100 2 L100 92 C72 99 44 91 8 98 C2 70 10 36 6 4Z'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.stage .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:58% 50%}
+.stage .before{filter:grayscale(.75) sepia(.35) brightness(.78) contrast(.9)}
+.stage .after{clip-path:inset(0 0 0 0);animation:sweep 2.6s cubic-bezier(.65,.05,.25,1) .5s both}
+.stage .edge{position:absolute;top:0;bottom:0;left:0;width:3px;background:linear-gradient(transparent,#fff 20%,#fff 80%,transparent);box-shadow:0 0 30px 10px rgba(255,255,255,.55);animation:edge 2.6s cubic-bezier(.65,.05,.25,1) .5s both;pointer-events:none}
+@keyframes sweep{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes edge{0%{left:0;opacity:1}92%{opacity:1}100%{left:100%;opacity:0}}
+.steam{position:absolute;left:18%;bottom:30%;width:60%;height:60%;pointer-events:none}
+.steam span{position:absolute;bottom:0;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.75),rgba(255,255,255,0) 70%);filter:blur(6px);opacity:0;animation:rise 7s ease-in infinite}
+.steam span:nth-child(1){left:10%;animation-delay:2.8s}
+.steam span:nth-child(2){left:38%;animation-delay:4.2s;width:120px;height:120px}
+.steam span:nth-child(3){left:64%;animation-delay:5.6s}
+.steam span:nth-child(4){left:26%;animation-delay:7s;width:70px;height:70px}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}20%{opacity:.85}100%{transform:translateY(-260px) translateX(30px) scale(1.8);opacity:0}}
+.badge{position:absolute;left:-36px;bottom:26px;width:150px;height:150px;border-radius:50%;background:var(--plate);display:grid;place-items:center;box-shadow:0 20px 40px -18px rgba(6,47,75,.5)}
+.badge img{width:118px;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stage .ribbon{position:absolute;right:-10px;top:30px;width:250px;height:70px;color:#fff;display:grid;place-items:center;font-family:var(--display);font-style:italic;font-weight:800;font-size:18px;filter:drop-shadow(0 12px 18px rgba(184,27,43,.35))}
+.stage .ribbon svg{position:absolute;inset:0;width:100%;height:100%}
+.stage .ribbon span{position:relative}
+.wave-flag path{animation:flutter 5s ease-in-out infinite;transform-origin:center}
+@keyframes flutter{50%{transform:scaleY(1.06) skewX(-2deg)}}
+
+@media (max-width:960px){
+  .hero{padding:34px 0 64px}
+  .hero .wrap{grid-template-columns:1fr}
+  .stage{max-width:640px;width:100%;margin-inline:auto}
+  .badge{left:6px;width:116px;height:116px}.badge img{width:92px}
+  .facts div{padding-right:14px;margin-right:14px}
+}
+@media (max-width:520px){.facts b{font-size:24px}.stage .ribbon{width:200px;font-size:15px;right:0}}
+
+/* pillars band */
+.pillars{background:var(--blue-deep);color:#fff;position:relative;padding:86px 0 80px}
+.pillars::before{content:"";position:absolute;left:0;right:0;top:-1px;height:46px;background:var(--paper);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 46' preserveAspectRatio='none'%3E%3Cpath d='M0 0H1200V12C1000 46 800 40 600 22S200 4 0 30Z'/%3E%3C/svg%3E") center/100% 100%;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 46' preserveAspectRatio='none'%3E%3Cpath d='M0 0H1200V12C1000 46 800 40 600 22S200 4 0 30Z'/%3E%3C/svg%3E") center/100% 100%}
+.road{position:relative;height:64px;margin-bottom:40px}
+.road::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px dashed rgba(255,255,255,.28)}
+.road .clean{position:absolute;left:0;top:calc(50% - 1px);height:3px;width:0;background:linear-gradient(90deg,#6CC3F0,#fff);transition:width 2.8s cubic-bezier(.5,0,.2,1)}
+.road .truck{position:absolute;top:0;left:0;width:64px;height:64px;transform:translateX(-10px);transition:transform 2.8s cubic-bezier(.5,0,.2,1)}
+.road .truck img{width:64px;height:64px;border-radius:50%;background:#fff}
+.road.go .clean{width:calc(100% - 54px)}
+.road.go .truck{transform:translateX(calc(var(--roadw,1000px) - 64px))}
+.pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.pillar{padding:6px 30px 6px 0;margin-right:30px;border-right:1px solid rgba(255,255,255,.16)}
+.pillar:last-child{border:0;margin:0}
+.pillar svg{width:42px;height:42px;color:#6CC3F0;margin-bottom:18px}
+.pillar h3{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 106;font-size:22px;line-height:1.15;margin:0 0 10px}
+.pillar h3 a{text-decoration:none}
+.pillar h3 a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--red)}
+.pillar p{margin:0;color:#CFE3F1;font-size:15.5px}
+@media (max-width:960px){.pillar-grid{grid-template-columns:1fr 1fr;gap:36px 0}.pillar:nth-child(2){border:0;margin:0}}
+@media (max-width:560px){.pillar-grid{grid-template-columns:1fr}.pillar{border:0;margin:0;padding:0 0 26px;border-bottom:1px solid rgba(255,255,255,.16)}}
+
+/* advantage */
+.advantage{padding:110px 0}
+.advantage .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.photo-stack{position:relative}
+.photo-stack .main{border-radius:28px 140px 28px 28px;overflow:hidden;aspect-ratio:4/4.4}
+.photo-stack .main img{width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+.photo-stack .inset{position:absolute;right:-28px;bottom:-34px;width:48%;border:8px solid var(--paper);border-radius:22px;overflow:hidden;aspect-ratio:4/3}
+.photo-stack .inset img{width:100%;height:100%;object-fit:cover}
+.flag-label{position:absolute;left:-22px;top:42px;width:300px;height:96px;color:#fff;display:grid;place-items:center;text-align:center;font-family:var(--display);font-style:italic;font-weight:800;font-size:22px;line-height:1.05;filter:drop-shadow(0 14px 18px rgba(184,27,43,.35))}
+.flag-label svg{position:absolute;inset:0;width:100%;height:100%}
+.flag-label span{position:relative;padding:0 26px}
+h2.big{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 112;font-size:clamp(32px,3.7vw,52px);line-height:1;letter-spacing:-.015em;margin:0 0 24px}
+.advantage p{color:var(--ink-soft);margin:0 0 18px;max-width:34em}
+.advantage p a{color:var(--blue);font-weight:700;text-underline-offset:3px}
+.areas{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 30px;padding:0;list-style:none}
+.areas li{display:flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:var(--mist);font-weight:600;font-size:15px;color:var(--blue-deep)}
+:root[data-theme="dark"] .areas li{color:#9fd6f3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .areas li{color:#9fd6f3}}
+.areas svg{width:14px;height:14px;color:var(--red)}
+.counters{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 32px}
+.counters div{border-top:3px solid var(--red);padding-top:14px}
+.counters div:nth-child(2){border-color:var(--blue)}
+.counters div:nth-child(3){border-color:var(--blue-deep)}
+.counters b{display:block;font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 120;font-size:44px;line-height:1}
+.counters span{font-size:14.5px;color:var(--ink-soft)}
+.diff{font-family:var(--display);font-style:italic;font-weight:800;color:var(--red);font-size:21px;margin:0 0 20px}
+@media (max-width:960px){.advantage{padding:80px 0}.advantage .wrap{grid-template-columns:1fr;gap:70px}.photo-stack{max-width:560px}.flag-label{left:-8px;width:250px;height:82px;font-size:18px}.photo-stack .inset{right:-6px}}
+
+/* services */
+.services{background:var(--mist);padding:110px 0;position:relative}
+.services-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:48px;flex-wrap:wrap}
+.services-head h2{margin:0;max-width:12em}
+.services-head p{margin:0;color:var(--ink-soft);max-width:26em}
+.svc{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
+.svc-view{position:sticky;top:120px;aspect-ratio:5/4;border-radius:26px;overflow:hidden;background:var(--blue-deep)}
+.svc-view img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .5s,transform 1.2s}
+.svc-view img.on{opacity:1;transform:none}
+.svc-view .cap{position:absolute;left:18px;bottom:18px;right:18px;display:flex;justify-content:space-between;align-items:center;background:rgba(6,47,75,.82);backdrop-filter:blur(6px);color:#fff;border-radius:16px;padding:14px 18px;font-family:var(--display);font-weight:700;font-size:18px}
+.svc-view .cap a{color:#fff;font-size:14px;font-family:var(--body);font-weight:600}
+.svc-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.svc-list a{display:grid;grid-template-columns:1fr auto;align-items:center;gap:16px;padding:22px 4px;border-bottom:1px solid var(--line);text-decoration:none;font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 108;font-size:clamp(22px,2.3vw,32px);line-height:1.1;transition:color .25s,padding .25s}
+.svc-list a .thumb{display:none}
+.svc-list .go{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;transition:.25s}
+.svc-list .go svg{width:18px;height:18px}
+.svc-list a:hover,.svc-list a.on{color:var(--red);padding-left:14px}
+.svc-list a:hover .go,.svc-list a.on .go{background:var(--red);border-color:var(--red);color:#fff;transform:rotate(-45deg)}
+@media (max-width:900px){
+  .services{padding:80px 0}
+  .svc{grid-template-columns:1fr}
+  .svc-view{display:none}
+  .svc-list a{grid-template-columns:72px 1fr auto}
+  .svc-list a .thumb{display:block;width:72px;height:56px;border-radius:12px;object-fit:cover}
+}
+
+/* guarantee */
+.guarantee{padding:120px 0;position:relative;overflow:hidden}
+.guarantee .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:center}
+.guarantee h2{margin-bottom:22px}
+.guarantee .q{font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(21px,2vw,26px);line-height:1.3;color:var(--blue-deep);margin:0 0 22px;padding-left:22px;border-left:4px solid var(--blue)}
+:root[data-theme="dark"] .guarantee .q{color:#9fd6f3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .guarantee .q{color:#9fd6f3}}
+.guarantee .not{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 122;font-size:clamp(34px,4.4vw,60px);color:var(--red);line-height:1;margin:0 0 24px;letter-spacing:-.02em}
+.guarantee p{color:var(--ink-soft);max-width:36em}
+.guarantee p strong{color:var(--ink)}
+.receipt{position:relative;background:#fff;color:#1b2a35;border-radius:6px;padding:40px 36px 44px;box-shadow:0 40px 70px -30px rgba(6,47,75,.45);transform:rotate(2.2deg);max-width:430px;width:100%;margin-left:auto;font-size:15px}
+.receipt::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:16px;background:radial-gradient(circle at 10px 0,transparent 9px,#fff 10px) 0 0/20px 16px repeat-x}
+.receipt img{width:150px;margin:0 auto 10px}
+.receipt .r-title{text-align:center;font-family:var(--display);font-weight:800;font-size:15px;color:#59707f;margin:0 0 22px}
+.receipt .row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px dashed #c9d6df}
+.receipt .row .x{color:#59707f;text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:2px}
+.receipt .row b{font-family:var(--display)}
+.receipt .tick{width:22px;height:22px;border-radius:50%;background:#e6f3fa;color:var(--blue);display:grid;place-items:center}
+.receipt .tick svg{width:12px;height:12px}
+.receipt .eq{display:flex;justify-content:space-between;gap:8px;margin-top:22px;padding:14px 16px;border-radius:10px;background:#EDF5FA;color:#0A4E78;font-family:var(--display);font-weight:800;font-size:16px}
+.receipt .row.note{display:block;color:#59707f;font-size:14px}
+.stamp{position:absolute;right:-34px;top:-44px;width:138px;height:138px;background:rgba(255,255,255,.85);border:4px solid var(--red);border-radius:50%;display:grid;place-items:center;text-align:center;color:var(--red);font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 120;font-size:21px;line-height:1;transform:rotate(-16deg) scale(2.2);opacity:0;transition:transform .45s cubic-bezier(.2,1.6,.4,1),opacity .2s;}
+.stamp::before{content:"";position:absolute;inset:7px;border:1.5px solid var(--red);border-radius:50%}
+.receipt.stamped .stamp{transform:rotate(-16deg) scale(1);opacity:.9}
+@media (max-width:960px){.stamp{right:-6px;top:-50px;width:116px;height:116px;font-size:18px}.guarantee{padding:84px 0}.guarantee .wrap{grid-template-columns:1fr;gap:56px}.receipt{margin:0 auto}}
+
+/* partners */
+.partners{padding:0 0 110px}
+.partners .box{border:1px solid var(--line);border-radius:30px;padding:44px;display:grid;grid-template-columns:.8fr 2fr;gap:40px;align-items:center}
+.partners h2{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 108;font-size:clamp(24px,2.4vw,32px);line-height:1.1;margin:0}
+.logos{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:flex-end}
+.logos a,.logos .tile{display:grid;place-items:center;background:#fff;border-radius:18px;height:128px;padding:10px;border:1px solid var(--line);transition:transform .25s}
+.logos a:hover{transform:translateY(-4px) rotate(-1.5deg)}
+.logos img{max-height:108px;width:auto}
+.logos .ama img{max-height:108px;border-radius:10px}
+@media (max-width:960px){.partners{padding-bottom:80px}.partners .box{grid-template-columns:1fr;padding:30px}.logos{justify-content:flex-start}.logos a,.logos .tile{height:104px}.logos img{max-height:84px}}
+
+/* questions band */
+.questions{position:relative;color:#fff;padding:120px 0 110px;isolation:isolate;background:linear-gradient(var(--paper) 50%,var(--navy) 50%)}
+.questions .bg{position:absolute;inset:0;z-index:-1}
+.questions .bg svg{width:100%;height:100%}
+.questions .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.questions h2{font-family:var(--display);font-weight:900;font-style:italic;font-variation-settings:"wdth" 120;font-size:clamp(54px,8vw,120px);line-height:.9;margin:0;letter-spacing:-.02em}
+.questions p{font-size:20px;margin:0 0 28px;color:#FFE3E5}
+.questions .call{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 115;font-size:clamp(30px,3.6vw,46px);text-decoration:none;display:inline-block;margin-bottom:24px;border-bottom:3px solid rgba(255,255,255,.5)}
+.questions .call:hover{border-color:#fff}
+.questions .btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--red-deep)}
+.btn-white:hover{background:var(--navy);color:#fff}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--red-deep)}
+.questions small{display:block;margin-top:26px;color:#FFD3D7;font-size:15px}
+@media (max-width:860px){.questions{padding:96px 0 90px}.questions .wrap{grid-template-columns:1fr}}
+
+/* footer */
+.footer{background:var(--navy);color:#C9DCEA;padding:84px 0 0;font-size:15.5px}
+.footer .grid{display:grid;grid-template-columns:1.3fr .9fr .9fr 1.4fr;gap:40px}
+.footer .logo{display:inline-block;background:#fff;margin-bottom:22px}
+.footer .logo img{width:200px}
+.footer h4{font-family:var(--display);font-weight:800;font-size:18px;color:#fff;margin:0 0 18px}
+.footer ul{list-style:none;margin:0;padding:0}
+.footer li{margin-bottom:10px}
+.footer a{text-decoration:none}
+.footer a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.footer .contact li{display:flex;gap:10px;align-items:flex-start}
+.footer .contact svg{width:17px;height:17px;flex:none;margin-top:4px;color:#6CC3F0}
+.footer .note{margin-top:18px;font-size:14px;color:#9DB9CC;font-style:italic}
+.news p{margin:0 0 16px}
+.news form{display:grid;gap:10px}
+.news input{width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font:inherit}
+.news input::placeholder{color:#9DB9CC}
+.news button{justify-self:start;border:0}
+.news .msg{font-size:14px;color:#9fe0b5;min-height:1em;margin:0}
+.footer .bottom{margin-top:64px;border-top:1px solid rgba(255,255,255,.12);padding:24px 0 28px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;font-size:14.5px}
+.footer .bottom .links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.social{display:flex;gap:10px}
+.social a{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08)}
+.social a:hover{background:var(--red)}
+.social svg{width:16px;height:16px;fill:#fff}
+.credit a{color:#fff;font-weight:600}
+@media (max-width:960px){.footer .grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.footer .grid{grid-template-columns:1fr}}
+
+/* reveal (used sparingly) */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  .stage .after{clip-path:none}.stage .edge,.steam{display:none}
+  .receipt .stamp{opacity:.9;transform:rotate(-16deg)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <ul>
+      <li><a href="tel:+1-780-487-0184"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>780-487-0184</a></li>
+      <li class="hide-sm"><a href="mailto:info@amsteam.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>info@amsteam.com</a></li>
+      <li class="hide-sm"><a href="https://www.google.com/maps?q=13051,+156+Street,+Edmonton,+AB+T5V+0A2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>13051 - 156 Street NW, Edmonton, AB T5V 0A2</a></li>
+    </ul>
+    <a class="book" href="https://clienthub.getjobber.com/booking/f1ee4ce9-cbd7-4f35-b475-73e1ffdcfdc9/" target="_blank" rel="noopener">Book Now</a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="wrap">
+    <a class="logo" href="https://amsteam.com" aria-label="AmSteam home"><img src="images/amsteam-logo.png" alt="AmSteam Carpet and Upholstery Cleaning" width="600" height="208"></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <ul>
+        <li><a href="https://amsteam.com/carpet-cleaning-edmonton/">Services <svg class="caret" viewBox="0 0 10 10"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="drop">
+            <li><a href="https://amsteam.com/carpet-cleaning-edmonton/steam-cleaning/">Carpet Cleaning</a></li>
+            <li><a href="https://amsteam.com/edmonton-business-and-commercial-carpet-cleaning/">Commercial Carpet Cleaning</a></li>
+            <li><a href="https://amsteam.com/carpet-cleaning-edmonton/furniture-upholstery-cleaning/">Furniture Cleaning</a></li>
+            <li><a href="https://amsteam.com/carpet-cleaning-edmonton/vehicle-upholstery-cleaning/">Vehicle Upholstery Cleaning</a></li>
+            <li><a href="https://amsteam.com/carpet-cleaning-edmonton/area-rug-cleaning/">Area Rug Cleaning</a></li>
+            <li><a href="https://amsteam.com/cleaners-warehouse-carpet-and-upholstery-protector/">Cleaners Warehouse Protector</a></li>
+            <li><a href="https://amsteam.com/carpet-cleaning-edmonton/deodorizing-disinfecting/">Deodorizing Disinfecting</a></li>
+          </ul>
+        </li>
+        <li><a href="https://amsteamrestoration.com/">Flood Restoration</a></li>
+        <li><a href="https://amsteam.com/about-us/">About Us <svg class="caret" viewBox="0 0 10 10"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="drop">
+            <li><a href="https://amsteam.com/frequently-asked-questions/">Frequently Asked Questions</a></li>
+            <li><a href="https://amsteam.com/carpet-cleaning-edmonton/carpet-cleaning-method/">Our Carpet Cleaning Method</a></li>
+            <li><a href="https://amsteam.com/service-areas/">Service Areas</a></li>
+          </ul>
+        </li>
+        <li><a href="https://amsteam.com/contact-today/">Contact Us</a></li>
+        <li><a href="https://amsteam.com/blog/">Blog</a></li>
+        <li><a href="https://amsteam.com/carpet-cleaning-promotions/">Promotions</a></li>
+      </ul>
+      <div class="mobile-book"><a class="btn btn-red" href="https://clienthub.getjobber.com/booking/f1ee4ce9-cbd7-4f35-b475-73e1ffdcfdc9/" target="_blank" rel="noopener">Book Now</a></div>
+    </nav>
+    <a class="btn btn-red" href="https://clienthub.getjobber.com/booking/f1ee4ce9-cbd7-4f35-b475-73e1ffdcfdc9/" target="_blank" rel="noopener">Book Now</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+  </div>
+</header>
+
+<main id="content">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker"><svg viewBox="0 0 46 14"><path d="M1 9 C10 1 18 1 24 7 S38 13 45 4" fill="none" stroke="#E82838" stroke-width="3" stroke-linecap="round"/></svg>Clean Living with AmSteam</p>
+      <h1><span class="l1">Edmonton</span><span class="l2">Carpet</span><span class="l3">Cleaning</span></h1>
+      <p class="lead">Reliable, professional carpet cleaning service from beginning to end, with the power of truck mounted steam cleaning.</p>
+      <div class="ctas">
+        <a class="btn btn-red" href="https://clienthub.getjobber.com/booking/f1ee4ce9-cbd7-4f35-b475-73e1ffdcfdc9" target="_blank" rel="noopener">Book Now</a>
+        <a class="btn btn-line" href="tel:780-487-0184"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>780-487-0184</a>
+      </div>
+      <div class="facts">
+        <div><b>25+ years</b><span>of experience</span></div>
+        <div><b>140</b><span>awesome reviews online</span></div>
+        <div><b>Family</b><span>owned Edmonton business</span></div>
+      </div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="frame">
+        <img class="before" src="images/hero-steam-wand.jpg" alt="">
+        <img class="after" src="images/hero-steam-wand.jpg" alt="Steam cleaning wand on a freshly cleaned carpet">
+        <div class="edge"></div>
+        <div class="steam"><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="ribbon wave-flag"><svg viewBox="0 0 250 70" preserveAspectRatio="none"><path d="M4 12 C60 -2 110 4 140 12 S210 22 246 6 L246 56 C210 70 170 64 140 58 S60 48 4 64Z" fill="#E82838"/></svg><span>No Surprises Guarantee</span></div>
+      <div class="badge"><img src="images/amsteam-advantage-badge.png" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars" aria-label="Why AmSteam">
+  <div class="wrap">
+    <div class="road" id="road" aria-hidden="true"><div class="clean"></div><div class="truck"><img src="images/truck-icon.png" alt=""></div></div>
+    <div class="pillar-grid">
+      <article class="pillar">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M4 14h24v20H4zM28 20h9l7 7v7H28z"/><circle cx="12" cy="36" r="4" fill="#0A4E78"/><circle cx="36" cy="36" r="4" fill="#0A4E78"/></svg>
+        <h3><a href="https://amsteam.com/carpet-cleaning-edmonton/">The Power of Truck Mounted Cleaning</a></h3>
+        <p>It all starts here! We make sure our technician's have the latest in powerful truck mounted technology.</p>
+      </article>
+      <article class="pillar">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M14 20c-4-4 4-6 0-11M24 20c-4-4 4-6 0-11M34 20c-4-4 4-6 0-11"/><path d="M6 28h36l-4 12H10z" stroke-linejoin="round"/></svg>
+        <h3><a href="https://amsteam.com/carpet-cleaning-edmonton/steam-cleaning/">Deep Clean with Steam Cleaning</a></h3>
+        <p>Steam Cleaning is the recommended method for cleaning carpet by over 95% of carpet manufacturers.</p>
+      </article>
+      <article class="pillar">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M10 5h28v38l-5-3-4 3-5-3-4 3-5-3-5 3z"/><path d="M17 18l5 5 9-9" stroke-linecap="round"/><path d="M17 31h14" stroke-linecap="round"/></svg>
+        <h3><a href="#guarantee">No Surprises Guarantee</a></h3>
+        <p>Looking for reliable carpet cleaning pricing in Edmonton? At AmSteam, we pride ourselves on offering you a No Surprises Guarantee!</p>
+      </article>
+      <article class="pillar">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M6 22 24 7l18 15v20H6z"/><path d="M24 36c-6-4-9-7-9-10a4 4 0 0 1 9-2 4 4 0 0 1 9 2c0 3-3 6-9 10z"/></svg>
+        <h3><a href="https://amsteam.com/carpet-cleaning-edmonton/deodorizing-disinfecting/">Family Friendly Products</a></h3>
+        <p>All of our products are kid safe and pet friendly. If we wouldn’t use it in our homes, we won’t use it in yours.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGE -->
+<section class="advantage" id="about">
+  <div class="wrap">
+    <div class="photo-stack rv">
+      <div class="main"><img src="images/puppy-on-carpet.jpg" alt="Puppy relaxing on a clean carpet" loading="lazy"></div>
+      <div class="inset"><img src="images/pets-on-clean-sofa.jpg" alt="Dog and cat on a clean sofa" loading="lazy"></div>
+      <div class="flag-label wave-flag"><svg viewBox="0 0 300 96" preserveAspectRatio="none"><path d="M4 16 C70 -4 130 6 170 16 S250 30 296 8 L296 76 C250 96 205 88 170 80 S70 66 4 88Z" fill="#E82838"/></svg><span>Get The AmSteam Advantage</span></div>
+    </div>
+    <div>
+      <h2 class="big">Deep clean your carpet with the power of steam cleaning</h2>
+      <p>Reliable, professional carpet cleaning service from beginning to end. AmSteam proudly serves Edmonton, St. Albert, Sherwood Park and surrounding areas, with exceptional Carpet &amp; Upholstery Cleaning Services.</p>
+      <p>When you hire AmSteam, you’re hiring a professional, <a href="https://amsteam.com/about-us/">family owned Edmonton Business</a> with over 25 years of experience and 140 awesome reviews online!</p>
+      <ul class="areas">
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>Edmonton</li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>St. Albert</li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>Sherwood Park</li>
+        <li><a href="https://amsteam.com/service-areas/" style="text-decoration:none">and surrounding areas</a></li>
+      </ul>
+      <div class="counters">
+        <div><b data-count="25" data-suffix="+">25+</b><span>years of experience</span></div>
+        <div><b data-count="140">140</b><span>awesome reviews online</span></div>
+        <div><b data-count="95" data-suffix="%">95%</b><span>of carpet manufacturers recommend steam</span></div>
+      </div>
+      <p class="diff">Experience the AmSteam difference today!</p>
+      <a class="btn btn-red" href="https://clienthub.getjobber.com/booking/f1ee4ce9-cbd7-4f35-b475-73e1ffdcfdc9" target="_blank" rel="noopener">Book now</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="services-head">
+      <h2 class="big">Edmonton Steam Cleaning Services</h2>
+      <p>Exceptional Carpet &amp; Upholstery Cleaning Services for Edmonton, St. Albert, Sherwood Park and surrounding areas.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-view" id="svcView">
+        <img class="on" src="images/service-residential.jpg" alt="" data-k="0">
+        <img src="images/service-commercial.jpg" alt="" data-k="1" loading="lazy">
+        <img src="images/service-area-rug.jpg" alt="" data-k="2" loading="lazy">
+        <img src="images/service-upholstery.jpg" alt="" data-k="3" loading="lazy">
+        <img src="images/service-apartment.jpg" alt="" data-k="4" loading="lazy">
+        <img src="images/service-vehicle-rv.jpg" alt="" data-k="5" loading="lazy">
+        <img src="images/service-mattress.jpg" alt="" data-k="6" loading="lazy">
+        <img src="images/service-patio-pet-beds.jpg" alt="" data-k="7" loading="lazy">
+        <div class="cap"><span id="svcName">Residential Carpet Cleaning</span><a id="svcLink" href="https://amsteam.com/carpet-cleaning-edmonton/">Learn more</a></div>
+      </div>
+      <ul class="svc-list" id="svcList">
+        <li><a class="on" data-k="0" href="https://amsteam.com/carpet-cleaning-edmonton/"><img class="thumb" src="images/service-residential.jpg" alt="" loading="lazy"><span>Residential Carpet Cleaning</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a data-k="1" href="https://amsteam.com/edmonton-business-and-commercial-carpet-cleaning/"><img class="thumb" src="images/service-commercial.jpg" alt="" loading="lazy"><span>Commercial Carpet Cleaning</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a data-k="2" href="https://amsteam.com/carpet-cleaning-edmonton/area-rug-cleaning/"><img class="thumb" src="images/service-area-rug.jpg" alt="" loading="lazy"><span>Area Rug Cleaning</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a data-k="3" href="https://amsteam.com/carpet-cleaning-edmonton/furniture-upholstery-cleaning/"><img class="thumb" src="images/service-upholstery.jpg" alt="" loading="lazy"><span>Upholstery Cleaning</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a data-k="4" href="https://amsteam.com/carpet-cleaning-edmonton/steam-cleaning/"><img class="thumb" src="images/service-apartment.jpg" alt="" loading="lazy"><span>Apartment Carpet Cleaning</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a data-k="5" href="https://amsteam.com/carpet-cleaning-edmonton/vehicle-upholstery-cleaning/"><img class="thumb" src="images/service-vehicle-rv.jpg" alt="" loading="lazy"><span>Vehicle &amp; RV Steam Cleaning</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a data-k="6" href="https://amsteam.com/carpet-cleaning-edmonton/furniture-upholstery-cleaning/"><img class="thumb" src="images/service-mattress.jpg" alt="" loading="lazy"><span>Mattresses</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a data-k="7" href="https://amsteam.com/carpet-cleaning-edmonton/furniture-upholstery-cleaning/"><img class="thumb" src="images/service-patio-pet-beds.jpg" alt="" loading="lazy"><span>Patio cushions, Pet beds and more!</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee" id="guarantee">
+  <div class="wrap">
+    <div>
+      <h2 class="big">No Surprises Guarantee</h2>
+      <p class="q">Have you ever dealt with a carpet cleaning company that quoted you a special, low price just to get in the door, then left you with a bill almost double the initial quote?</p>
+      <p class="not">Not with AmSteam.</p>
+      <p>At AmSteam, our carpet cleaners are committed to quoting the most fair and accurate price possible. Our qualified professionals will ask you a few questions about your home and then provide you with a quote so that there are no surprises when you see your bill.</p>
+      <p>Additional disposal fees? Service Charges? If we don’t explain it to you before our carpet cleaning services are provided, you simply don’t pay it. <strong>Rest assured knowing that with our No Surprises Guarantee, what we quote you is what you’ll pay. No Surprises.</strong></p>
+    </div>
+    <div class="receipt" id="receipt" aria-hidden="true">
+      <img src="images/amsteam-logo.png" alt="">
+      <p class="r-title">No Surprises Guarantee</p>
+      <div class="row"><span class="x">Additional disposal fees?</span><span class="tick"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6" fill="none" stroke="currentColor" stroke-width="2"/></svg></span></div>
+      <div class="row"><span class="x">Service Charges?</span><span class="tick"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-6" fill="none" stroke="currentColor" stroke-width="2"/></svg></span></div>
+      <div class="row note">If we don’t explain it to you before we clean, you simply don’t pay it.</div>
+      <div class="eq"><span>What we quote you</span><span>=</span><span>What you’ll pay</span></div>
+      <div class="stamp">No<br>Surprises</div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners">
+  <div class="wrap">
+    <div class="box">
+      <h2>Check out our Reward Programs and Partners</h2>
+      <div class="logos">
+        <a href="https://homestars.com/companies/2595909-amsteam-carpet-upholstery-cleaning?service_area=1877104" target="_blank" rel="noopener"><img src="images/homestars.jpg" alt="HomeStars: here is what others are saying about us" loading="lazy"></a>
+        <a class="ama" href="https://portal.caarewards.ca/ama/partner/amsteam-carpet-cleaning-inc/?pid=72478" target="_blank" rel="noopener"><img src="images/ama-rewards.jpg" alt="AMA Rewards: $15.00 off on carpet, upholstery and area rug cleaning" loading="lazy"></a>
+        <a href="https://business.edmontonchamber.com/list/member/amsteam-carpet-cleaning-inc-edmonton-16654" target="_blank" rel="noopener"><img src="images/edmonton-chamber.jpg" alt="Edmonton Chamber of Commerce member" loading="lazy"></a>
+        <span class="tile"><img src="images/amsteam-advantage-badge.png" alt="Get the AmSteam Advantage" loading="lazy"></span>
+        <a href="https://www.houzz.com/professionals/kitchen-and-bath-remodelers/dv-custom-built-pfvwus-pf~218507321" target="_blank" rel="noopener"><img src="images/houzz-featured.jpg" alt="Featured on Houzz" loading="lazy"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUESTIONS -->
+<section class="questions">
+  <div class="bg" aria-hidden="true"><svg viewBox="0 0 1440 520" preserveAspectRatio="none"><path d="M0 60 C240 0 480 10 720 50 S1200 110 1440 30 L1440 470 C1200 520 960 500 720 470 S240 420 0 490Z" fill="#E82838"/></svg></div>
+  <div class="wrap">
+    <h2>Questions?</h2>
+    <div>
+      <p>Our Customer Service Representatives are ready to help you find a carpet cleaning solution that fits your budget – today.</p>
+      <a class="call" href="tel:780-487-0184">780-487-0184</a>
+      <div class="btns">
+        <a class="btn btn-white" href="tel:780-487-0184">Call Now</a>
+        <a class="btn btn-ghost" href="https://clienthub.getjobber.com/booking/f1ee4ce9-cbd7-4f35-b475-73e1ffdcfdc9" target="_blank" rel="noopener">Book Now</a>
+      </div>
+      <small>Area rug drop-off and pickup is available by appointment only.</small>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <a class="logo" href="https://amsteam.com"><img src="images/amsteam-logo.png" alt="AmSteam Carpet and Upholstery Cleaning" loading="lazy"></a>
+        <ul class="contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:780-487-0184">780-487-0184</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><a href="mailto:info@amsteam.com">info@amsteam.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>13051 - 156 Street NW, Edmonton, AB T5V 0A2</span></li>
+        </ul>
+        <p class="note">Area rug drop-off and pickup is available by appointment only</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://amsteam.com/carpet-cleaning-edmonton/steam-cleaning/">Carpet Cleaning</a></li>
+          <li><a href="https://amsteam.com/carpet-cleaning-edmonton/furniture-upholstery-cleaning/">Furniture Cleaning</a></li>
+          <li><a href="https://amsteam.com/carpet-cleaning-edmonton/area-rug-cleaning/">Area Rug Cleaning</a></li>
+          <li><a href="https://amsteam.com/carpet-cleaning-edmonton/3m-staingard/">Scotchgard</a></li>
+          <li><a href="https://amsteam.com/carpet-cleaning-edmonton/deodorizing-disinfecting/">Disinfecting</a></li>
+          <li><a href="https://amsteamrestoration.com/">Flood Restoration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Let’s Connect</h4>
+        <ul>
+          <li><a href="https://amsteam.com/contact-today">Contact Us</a></li>
+          <li><a href="https://www.facebook.com/AmSteamEdmonton/">Facebook</a></li>
+          <li><a href="https://www.instagram.com/amsteamedmonton/">Instagram</a></li>
+          <li><a href="https://homestars.com/companies/2595909-AmSteam-Edmonton-Carpet-Cleaning-Furnace-Cleaning%20">Homestars</a></li>
+        </ul>
+      </div>
+      <div class="news">
+        <h4>Subscribe to our newsletter for a FREE Spot &amp; Stain Guide</h4>
+        <form id="news">
+          <input name="name" placeholder="Name" required autocomplete="name" aria-label="Name">
+          <input name="email" type="email" placeholder="Email" required autocomplete="email" aria-label="Email">
+          <button class="btn btn-red" type="submit">Subscribe</button>
+          <p class="msg" id="newsMsg" role="status"></p>
+        </form>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="links"><span>© All rights reserved</span><a href="https://amsteam.com/site-map/">Site Map</a></div>
+      <div class="social">
+        <a href="https://twitter.com/amsteamedmonton?lang=en" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.3 8.3L23 22h-6.6l-5.1-6.7L5.4 22H2.3l7.8-8.9L2 2h6.7l4.6 6.1zM17.8 20h1.7L7.3 3.9H5.5z"/></svg></a>
+        <a href="https://www.facebook.com/AmSteamEdmonton" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6c0-.9.6-1 1-1h3V1h-4c-4 0-5 3-5 5v2H6v4h3v11h5V12h3.5l.5-4z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UCKxwQ6ehYIq6-zebQu1jAFQ" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.9 3.1z"/></svg></a>
+        <a href="https://www.instagram.com/amsteamedmonton/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2z"/></svg></a>
+      </div>
+      <div class="credit"><a href="https://cleaningdigital.ca/" target="_blank" rel="noopener">Design by Cleaning Digital.</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // mobile menu
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';});});
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // truck road
+  var road=document.getElementById('road');
+  function setRoad(){road.style.setProperty('--roadw',road.offsetWidth+'px');}
+  setRoad();window.addEventListener('resize',setRoad);
+
+  // counters
+  function count(el){
+    var end=+el.dataset.count,suf=el.dataset.suffix||'',t0=null;
+    if(reduce){el.textContent=end+suf;return;}
+    function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+  }
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;var t=e.target;
+    if(t===road)t.classList.add('go');
+    else if(t.id==='receipt')setTimeout(function(){t.classList.add('stamped')},350);
+    else if(t.dataset.count)count(t);
+    else t.classList.add('in');
+    io.unobserve(t);
+  });},{threshold:.35});
+  io.observe(road);io.observe(document.getElementById('receipt'));
+  document.querySelectorAll('[data-count],.rv').forEach(function(el){io.observe(el)});
+
+  // services preview
+  var view=document.getElementById('svcView'),imgs=view.querySelectorAll('img'),name=document.getElementById('svcName'),link=document.getElementById('svcLink');
+  var rows=document.querySelectorAll('#svcList a');
+  function show(a){
+    var k=a.dataset.k;rows.forEach(function(r){r.classList.toggle('on',r===a)});
+    imgs.forEach(function(i){i.classList.toggle('on',i.dataset.k===k)});
+    name.textContent=a.querySelector('span').textContent;link.href=a.href;
+  }
+  rows.forEach(function(a){a.addEventListener('mouseenter',function(){show(a)});a.addEventListener('focus',function(){show(a)});});
+
+  // newsletter (front-end only)
+  document.getElementById('news').addEventListener('submit',function(e){e.preventDefault();document.getElementById('newsMsg').textContent='Thanks for subscribing.';this.reset();});
+})();
+</script>
+</body>
+</html>
